@@ -1,0 +1,24 @@
+package cn.smbms.service.bill;
+
+import cn.smbms.pojo.Bill;
+import cn.smbms.pojo.Provider;
+
+import java.util.List;
+
+public interface BillService {
+
+    //根据商品名称和供应商获得订单列表
+    public List<Bill> getBillList(String productName, Integer providerId);
+
+    //获得角色列表
+    public List<Provider> getProviderList();
+
+    //增加订单
+    public int addBill(Bill bill);
+
+    public Bill getBillByBillId(Integer bid);
+
+    public int modifyBill(Bill bill);
+
+    public int deleteBillById(Integer bid);
+}
